@@ -13,13 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             if (password_verify($_POST["password"], $row['password'])) {
-                header("Location:http://localhost/raw_php_github/custom-shop-app/index.php");
+                header("Location:http://localhost/custom-shop-app/index.php");
             } else {
-                header("Location:http://localhost/raw_php_github/custom-shop-app/auth/register.php");
+                header("Location:http://localhost/custom-shop-app/auth/register.php");
             }
         }
     } else {
-        header("Location:http://localhost/raw_php_github/custom-shop-app/auth/register.php");
+        header("Location:http://localhost/custom-shop-app/auth/register.php");
     }
     $conn->close();
 }
