@@ -62,6 +62,8 @@ tr:nth-child(even) {
 </head>
 <body>
 
+<a href="auth/login.php">Login</a>
+
 <h1>Product Search</h1>
 <form class="example" action="" method="POST">
     <input type="text" placeholder="Search.." name="search">
@@ -77,6 +79,7 @@ tr:nth-child(even) {
     </tr>
     <?php include 'show.php'; ?>
 </table>
+
 
 </body>
 </html>
