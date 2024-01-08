@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2023 at 03:58 PM
+-- Generation Time: Jan 08, 2024 at 08:39 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -66,6 +66,19 @@ INSERT INTO `shop_table` (`id`, `product_name`, `price`, `quantity`) VALUES
 (26, ' Milwaukee Torque Lock 9 in. Forged Alloy Steel Long Nose Pliers ', 23.99, 58),
 (27, ' Milwaukee Torque Lock 9 in. Forged Alloy Steel Long Nose Pliers ', 27.99, 12);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_table`
+--
+
+CREATE TABLE `user_table` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -77,6 +90,12 @@ ALTER TABLE `shop_table`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user_table`
+--
+ALTER TABLE `user_table`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -85,6 +104,12 @@ ALTER TABLE `shop_table`
 --
 ALTER TABLE `shop_table`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- AUTO_INCREMENT for table `user_table`
+--
+ALTER TABLE `user_table`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
